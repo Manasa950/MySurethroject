@@ -1,0 +1,15 @@
+<p>login works!</p>
+<!-- login.component.html -->
+<form (ngSubmit)="login()">
+    <label for="username">Username:</label>
+    <input type="text" id="username" [(ngModel)]="username" required>
+  
+    <label for="password">Password:</label>
+    <input type="password" id="password" [(ngModel)]="password" required>
+
+    <button type="submit">Login</button>
+  
+    <div *ngIf="loginError" class="error-message">
+      Invalid username or password. Please try again.
+    </div>
+</form>
